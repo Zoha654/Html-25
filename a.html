@@ -1,0 +1,45 @@
+<html>
+
+<body>
+
+    <h2>js class</h2>
+
+    <p id="a"></p>
+
+    <p id="b"></p>
+
+    <script>
+
+        class studnet {
+
+            constructor(name, year) {
+
+                this.name = name;
+
+                this.year = year;
+
+            }
+
+            age() {
+
+                let date = new Date();
+
+                return date.getFullYear() - this.year;
+
+            }
+
+        }
+
+        s1 = new studnet("zoha", 2011)
+
+        document.getElementById("a").innerHTML = "My name is " + s1.name + " i am " + s1.age() + " years old."
+
+        s2 = new studnet("noor", 2012)
+
+        document.getElementById("b").innerHTML = "My name is " + s2.name + " i am " + s2.age() + " years old."
+
+    </script>
+
+</body>
+
+</html>
