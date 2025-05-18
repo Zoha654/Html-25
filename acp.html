@@ -19,7 +19,7 @@
             }
 
             greet() {
-                // Correctly using template literal with backticks
+
                 return " Hello, my name is ${ this.name } and I am ${ this.age } years old."
             }
 
@@ -31,7 +31,7 @@
         // Child class: Student
         class Student extends Person {
             constructor(name, age, grade) {
-                super(name, age); // Inherit name and age from Person
+                super(name, age);
                 this.grade = grade;
             }
 
@@ -53,7 +53,7 @@
             Student.details() + "<br>" +
             Person.info();
 
-        // Show in the HTML page
+
         document.getElementById("output").innerHTML = result;
     </script>
 </body>
