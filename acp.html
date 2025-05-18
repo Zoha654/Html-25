@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Class in JavaScript</title>
+</head>
+
+<body>
+    <h1>Class and Inheritance in JavaScript</h1>
+    <p id="output"></p>
+
+    <script>
+        // Parent class: Person
+        class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            greet() {
+                // Correctly using template literal with backticks
+                return " Hello, my name is ${ this.name } and I am ${ this.age } years old."
+            }
+
+            static info() {
+                return "This is the Person class.";
+            }
+        }
+
+        // Child class: Student
+        class Student extends Person {
+            constructor(name, age, grade) {
+                super(name, age); // Inherit name and age from Person
+                this.grade = grade;
+            }
+
+            showGrade() {
+                return "I am in grade ${ this.grade }.;"
+            }
+
+            static details() {
+                return "This is the Student class.";
+            }
+        }
+
+        // Create a Student object
+        const tina = new Student("Tina", 12, "8th");
+
+        // Display outputs
+        const result = tina.greet() + "<br>" +
+            tina.showGrade() + "<br>" +
+            Student.details() + "<br>" +
+            Person.info();
+
+        // Show in the HTML page
+        document.getElementById("output").innerHTML = result;
+    </script>
+</body>
+
+</html>
